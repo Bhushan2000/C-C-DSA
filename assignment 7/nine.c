@@ -1,9 +1,11 @@
 #include <stdio.h>
 int main()
-{
+{   // Armstrong number also know as narcissistic number, plenary number, or pluperfect digital invariant
+
     int number, temp, r, x = 0;
     printf("Enter the number:");
     scanf("%d", &number);
+    
     // My Approach
     temp = number;
     while (temp != 0)
