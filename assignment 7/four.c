@@ -24,7 +24,7 @@ int main()
         // repeat this until remainder becomes zero
         while (remainder != 0)
         {
-            large = small;
+            large = small;  
             small = remainder;
             remainder = large % small;
         }
