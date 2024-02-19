@@ -1,14 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int i, j, row;
+    int row;
     printf("Enter rows: ");
     scanf("%d", &row);
-    for (i = 1; i <= row; i++) //  row
+    for (int i = 1; i <= row; i++)
     {
-        for (j = 1; j <= row; j++) //  column
+        for (int j = 1; j <= row * 2 - 1; j++)
         {
-            if (j >= row + 1 - i)
+            if (i == row || j == row - 1 + i || j == row + 1 - i)
                 printf("*");
             else
                 printf(" ");

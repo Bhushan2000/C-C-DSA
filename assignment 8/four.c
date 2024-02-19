@@ -1,10 +1,12 @@
 #include <stdio.h>
 int main()
 {
-    int i, j;
-    for (i = 1; i <= 5; i++) // column
+    int i, j, row;
+    printf("Enter rows: ");
+    scanf("%d", &row);
+    for (i = 1; i <= row; i++) // row
     {
-        for (j = 1; j <= 5; j++) // row
+        for (j = 1; j <= row; j++) // col
         {
             if (j < i)
                 printf(" ");

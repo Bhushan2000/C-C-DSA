@@ -11,7 +11,10 @@ int main()
         for (j = 1; j <= i; j++)
         {
             /* code */
-            printf("*");
+            if (j == 1 || j == i || i == row)
+                printf("*");
+            else
+                printf(" ");
         }
         printf("\n");
     }
