@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+void input(int, int, int);
 int main()
 {
     char choice;
@@ -15,14 +16,19 @@ int main()
         printf("\n c.Check Equilateral triangle");
         printf("\n d.Exit\n");
 
+        // used to clear the buffer
+        // and accept the next input
+        fflush(stdin);
         printf("\n Enter your choice:");
         scanf("%c", &choice);
-
+        if (choice != 'd')
+        {
+            printf("Enter three sides of the triangle:");
+            scanf("%d %d %d", &side1, &side2, &side3);
+        }
         switch (choice)
         {
         case 'a':
-            printf("Enter three sides of the triangle:");
-            scanf("%d %d %d", &side1, &side2, &side3);
             if (side1 == side2 || side1 == side3 || side2 == side3)
                 printf("isoscales triangle\n");
             else
@@ -30,21 +36,16 @@ int main()
             break;
 
         case 'b':
-            printf("Enter three sides of the triangle:");
-            scanf("%d %d %d", &side1, &side2, &side3);
-            max = side1 > side2   ? side1 > side3 ? side1 : side3
-                  : side2 > side3 ? side2
-                                  : side3;
-            if (max * max == side1 * side1 + side2 * side2)
+            if (side1 * side1 == side2 * side2 + side3 * side3 ||
+                side2 * side2 == side1 * side1 + side3 * side3 ||
+                side3 * side3 == side1 * side1 + side2 * side2)
                 printf("Right angle triangle\n");
             else
                 printf("Not a Right angle triangle\n");
             break;
 
         case 'c':
-            printf("Enter three sides of the triangle:");
-            scanf("%d %d %d", &side1, &side2, &side3);
-            if (side1 == side2 && side2 == side3)
+            if ((side1 == side2) && (side2 == side3))
                 printf("Equilateral triangle\n");
             else
                 printf("Not a Equilateral triangle\n");
@@ -52,9 +53,6 @@ int main()
 
         case 'd':
             exit(0);
-        default:
-            printf("Enter correct your choice");
-            break;
         }
     }
     return 0;
