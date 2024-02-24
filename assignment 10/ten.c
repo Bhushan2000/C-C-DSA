@@ -6,27 +6,43 @@ void primeFactors(int);
 // 2.Factor Tree Method
 int main()
 {
-    primeFactors(36);
+    primeFactors(1050);
     return 0;
 }
+// My Approach
+
+// void primeFactors(int number)
+// {
+//     int i, j, quotient;
+//     for (i = 2; i < number; i++)
+//     {
+//         for (j = 2; j <= i; j++)
+//         {
+//             if (i % j == 0) // not prime
+//                 break;
+//         }
+//         if (i == j)
+//         {
+//             while (quotient != 1)
+//             {
+//                 quotient = number / i; // until quotient becomes 1}
+//                 printf("%d ", quotient);
+//                 number = quotient;
+//             }
+//         }
+//     }
+// }
+
+// New Approach by teacher
+
 void primeFactors(int number)
 {
-    int i, j, quotient;
-    for (i = 2; i < number; i++)
+    for (int i = 2; number > 1; i++)
     {
-        for (j = 2; j <= i; j++)
+        while (number % i == 0)
         {
-            if (i % j == 0) // not prime
-                break;
-        }
-        if (i == j)
-        {
-            while (quotient != 1)
-            {
-                quotient = number / i; // until quotient becomes 1}
-                printf("%d ", quotient);
-                number = quotient;
-            }
+            printf("%d ", i);
+            number = number / i;
         }
     }
 }
