@@ -11,8 +11,8 @@ int main()
         printf("Nearest odd number is %d ", number + 1);
         break;
     case 1: // number is odd
-        // convert to even
-        printf("Nearest even number is %d ", number - 1);
+        // print as it is
+        printf("Nearest odd number is %d ", number);
         break;
     }
     return 0;
