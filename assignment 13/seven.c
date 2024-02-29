@@ -1,11 +1,11 @@
 #include <stdio.h>
-void hcf_of_two(int, int);
+int hcf_of_two(int, int);
 int main()
 {
-    hcf_of_two(4, 6);
+    printf("%d", hcf_of_two(4, 6));
     return 0;
 }
-void hcf_of_two(int n1, int n2) // 4 ,6
+int hcf_of_two(int n1, int n2) // 4 ,6
 {
     // for (int i = n1 < n2 ? n1 : n2; i > 1; i--) // bigger number can not divide smaller number
     // {                                           // i = 24;                24>1;  i--
@@ -14,7 +14,7 @@ void hcf_of_two(int n1, int n2) // 4 ,6
     //         return i;
     //     }
     // }
-    int i = n1 < n2 ? n1 : n2;
+    int min = n1 < n2 ? n1 : n2, chek;
     // while (i != 1)
     // {
     //     if (i == 1)
@@ -27,7 +27,5 @@ void hcf_of_two(int n1, int n2) // 4 ,6
     //     else
     //         i--;
     // }
-    if (i == 1)
-        return;
-    hcf_of_two(n1 % (i - 1), n2 % (i - 1));
+    
 }
