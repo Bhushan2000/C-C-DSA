@@ -1,5 +1,5 @@
 #include <stdio.h>
-int rotate_array_n_d_position(int[], int);
+int rotate_array_n_d_position(int[], int,int ,int);
 int main()
 {
     int size = 5, arr[] = {32, 29, 40, 12, 70}, n = 2;
@@ -8,7 +8,7 @@ int main()
     rotate_array_n_d_position(arr, size, n, d);
     return 0;
 }
-void rotate_array_n_d_position(arr, size, n, d)
+void rotate_array_n_d_position(int arr[],  int size, int n, int d)
 {
     
 }
