@@ -2,33 +2,23 @@
 #include <string.h>
 int main()
 {
-    char str[] = "String@123";
-    int smallest = str[0], temp, position, counter = 0, i;
-    while (counter != strlen(str) - 1)
-    {
-        smallest = str[counter];
-        for (i = 0; i < strlen(str) - 1; i++)
-        { // select smallest
-            if (smallest < str[i + 1])
-            {
-            }
-            else
-            {
-                smallest = str[i + 1];
-                position = i + 1;
-            }
-        }
-        if (str[counter] > str[position])
-        {
-            // swap
-            temp = str[position];
-            str[position] = str[counter];
-            str[counter] = temp;
-        }
-        // change counter
-        if (i == strlen(str)-1)
-            counter++;
-    }
-    printf("After Sort on String %s", str);
-    return 0;
+	// char str[] = "String@123";
+	char str[] = "javascript"; // Ans : aacijprstv
+	int smallest, temp, i, counter;
+	// Bubble
+	// selection character
+	for (counter = 0; counter != strlen(str); counter++)
+	{
+		for (i = counter; i < strlen(str); i++)
+		{ // swap character
+			if (str[i] < str[counter])
+			{
+				temp = str[counter];
+				str[counter] = str[i];
+				str[i] = temp;
+			}
+		}
+	}
+	printf("After Sort on String %s\n", str);
+	return 0;
 }
