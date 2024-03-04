@@ -1,11 +1,11 @@
 #include <stdio.h>
 void input(int[], int);
-void second_largest(int[], int);
+void second_smallest(int[], int);
 int main()
 {
     int size = 5, arr[] = {10, 55, 2, 988, 6};
     // input(arr, size);
-    second_largest(arr, size);
+    second_smallest(arr, size);
     return 0;
 }
 void input(int arr[], int size)
@@ -16,7 +16,7 @@ void input(int arr[], int size)
         scanf("%d", &arr[i]);
     }
 }
-void second_largest(int arr[], int size)
+void second_smallest(int arr[], int size)
 { // {10, 55, 2, 988, 6}
     int i, j;
     for (i = 0; i < size; i++)
@@ -31,5 +31,5 @@ void second_largest(int arr[], int size)
             }
         }
     }
-    printf("Second largest element of the array is %d", arr[1]);
+    printf("Second smallest element of the array is %d", arr[size - 2]);
 }
