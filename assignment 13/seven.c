@@ -1,11 +1,16 @@
 #include <stdio.h>
 int hcf_of_two(int, int);
+int hcf(int,int);
 int main()
 {
-   // printf("HCF is %d", hcf_of_two(36, 60));
-    printf("HCF is %d", hcf_of_two(10, 15));
-   // printf("HCF is %d", hcf_of_two(35, 10));
-   // printf("HCF is %d", hcf_of_two(31, 2));
+    int a = 492, b = 248, result;
+     printf("HCF is %d\n", hcf_of_two(36, 60));
+    //printf("HCF is %d", hcf_of_two(10, 15));
+    // printf("HCF is %d", hcf_of_two(35, 10));
+    // printf("HCF is %d", hcf_of_two(31, 2));
+    if (a > b)
+        result = hcf(b, a % b);
+    printf("HCF is %d", result);
     return 0;
 }
 int hcf_of_two(int n1, int n2) // 4 ,6
@@ -40,4 +45,11 @@ int hcf_of_two(int n1, int n2) // 4 ,6
     if (max % min == 0)
         return min;
     return hcf_of_two(max - min, min);
+}
+// teacher approach
+int hcf(int a, int b)
+{
+    if (b == 0)
+        return a;
+    hcf(b, a % b);
 }
