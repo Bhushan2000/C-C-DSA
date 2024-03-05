@@ -1,12 +1,14 @@
 #include <stdio.h>
 void rotate_array_n_d_position(int[], int, int, int);
+void rotate_array_n_d_position_another_apprach(int[], int, int, int);
 int main()
 {
     int size = 5, arr[] = {32, 29, 40, 12, 70}, n = 2;
-    //char d = 'l'; // left or Right
-     char d = 'r'; // left or Right
+    char d = 'l'; // left or Right
+    // char d = 'r'; // left or Right
     //  resulting array after left rotation 2 times is [40, 12, 70, 32, 29]
     rotate_array_n_d_position(arr, size, n, d);
+    rotate_array_n_d_position_another_apprach(arr, size, n, d);
     return 0;
 }
 void rotate_array_n_d_position(int arr[], int size, int n, int d)
@@ -58,9 +60,32 @@ void rotate_array_n_d_position(int arr[], int size, int n, int d)
         }
     }
     printf("\n");
-    printf("After roatate array %d postion in %c direction : ", n, d);
+    printf("After rotate array %d postion in %c direction : ", n, d);
     for (int i = 0; i < size; i++)
     {
+        printf("%d ", arr[i]);
+    }
+}
+// Another way
+void rotate_array_n_d_position_another_apprach(int arr[], int size, int n, int d)
+{
+    int temp[size], counter = 0;
+    for (int i = n; i < size; i++)
+    {
+        for (int j = counter; j < counter + 1; j++)
+        {
+            temp[counter] = arr[i];
+        }
+        counter++;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        temp[size - n + i] = arr[i];
+    }
+    printf("\n");
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = temp[i];
         printf("%d ", arr[i]);
     }
 }
