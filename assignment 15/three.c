@@ -1,5 +1,5 @@
 #include <stdio.h>
-int sort_array(int[], int);
+void sort_array(int[], int);
 int main()
 {
     int size = 16, arr[] = {10, 5555, 1, 5555, 4, 10, 444, 2, 4, 1, 444, 2, 454, 1, 656, 99999};
@@ -7,7 +7,8 @@ int main()
     sort_array(arr, size);
     return 0;
 }
-int sort_array(int a[], int size)
+// My Approach
+void sort_array(int a[], int size)
 {
     // arr[] = {10, 5555, 4, 1, 444}, // given array
     // arr[] = {1, 5555 ,4, 10, 444}, small 1
@@ -47,5 +48,4 @@ int sort_array(int a[], int size)
     }
     for (int i = 0; i < size; i++)
         printf("%d ", a[i]);
-    return 0;
 }
