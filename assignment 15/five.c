@@ -4,15 +4,14 @@ int adjacent_duplicate(int[], int);
 int main()
 {
     // int arr[] = {1, 1, 2, 3, 3},
-    int arr[] = {6, 10, 5, 4, 9, 120, 4, 6, 10}, size = sizeof(arr) / 4;
+    int arr[] = {6, 10, 10, 4, 9, 9, 4, 6, 10}, size = sizeof(arr) / 4;
     // Input: arr[] = {10, 5, 3, 4, 3, 5, 6}
     // Output: 5
-    // if (first_occurance(arr, size))
-    //     printf("Adjacent duplicate is : %d", first_occurance(arr, size));
-    // else
-    //     printf("No Adjacent duplicate found");
-    printf("Adjacent duplicate count is %d", adjacent_duplicate(arr, size));
-    return 0;
+    if (adjacent_duplicate(arr, size))
+        printf("Adjacent duplicate is : %d", adjacent_duplicate(arr, size));
+    else
+        printf("No Adjacent duplicate found");
+     return 0;
 }
 //  first occurrence of adjacent duplicate values in the array.
 // My first approach
@@ -36,17 +35,24 @@ int first_occurance(int arr[], int size)
 }
 // correct way
 int adjacent_duplicate(int arr[], int size)
-{ // {6, 10, 5, 4, 9, 120, 4, 6, 10}
-    int count = 0;
+{ 
+    int duplicate_value = 0;
     for (int i = 0; i < size - 1; i++)
     {
-        for (int j = i+1; j < size; j++)
+        for (int j = i + 1; j <= i + 1; j++)
         {
             if (arr[i] == arr[j])
             {
-                count++;
+                 duplicate_value =  arr[i];
+                 break;
             }
         }
+        // first occurance of duplicate only we needed.
+        if (duplicate_value!=0)
+        {
+            break;
+        }
+        
     }
-    return count;
+    return duplicate_value;
 }
