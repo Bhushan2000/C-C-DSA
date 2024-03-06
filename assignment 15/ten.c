@@ -2,7 +2,8 @@
 void frequency_of_element(int[], int);
 int main()
 {
-    int size = 5, arr1[] = {1, 2, 1, 4, 5};
+    int arr1[] = {1, 2, 1, 4, 5};
+    int size = sizeof(arr1) / 4;
     frequency_of_element(arr1, size);
     return 0;
 }
