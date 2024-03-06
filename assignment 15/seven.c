@@ -2,25 +2,23 @@
 void duplicate_elements(int[], int);
 int main()
 {
-    int arr[] = {1, 4, 8, 1, 1, 2, 5, 6, 2, 5}, size = 10;
+    int arr[] = {1, 2, 3, 4, 1, 4, 5}, size = sizeof(arr) / 4;
     duplicate_elements(arr, size);
+    // duplicate means element occurance two times
     return 0;
 }
 void duplicate_elements(int arr[], int size)
-{ // { 1, 4, 4, 1, 1 }
-    int counter = 0, i, duplicate = 0, duplicate_no;
-    while (counter != size - 1)
+{
+    int i, j, count = 0;
+    for (j = 0; j < size - 1; j++)
     {
-        for (i = counter; i < size; i++)
+        for (i = j + 1; i < size; i++)
         {
-            if (arr[counter] == arr[i + 1] && duplicate_no != counter)
+            if (arr[j] == arr[i])
             {
-                duplicate_no = arr[counter];
-                duplicate++;
-                break;
+                count++;
             }
         }
-        counter++;
     }
-    printf("duplicate number in array: %d", duplicate);
+    printf("duplicate number in array: %d", count);
 }
