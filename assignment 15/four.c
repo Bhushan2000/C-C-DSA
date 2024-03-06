@@ -67,6 +67,7 @@ void rotate_array_n_d_position(int arr[], int size, int n, int d)
     }
 }
 // Another way
+// copy original array into temp array and then re-copied temp array to original array after roatation done
 void rotate_array_n_d_position_another_apprach(int arr[], int size, int n, int d)
 {
     int temp[size], counter = 0;
@@ -83,9 +84,11 @@ void rotate_array_n_d_position_another_apprach(int arr[], int size, int n, int d
         temp[size - n + i] = arr[i];
     }
     printf("\n");
+    // copy and print array
     for (int i = 0; i < size; i++)
     {
         arr[i] = temp[i];
         printf("%d ", arr[i]);
     }
 }
+
