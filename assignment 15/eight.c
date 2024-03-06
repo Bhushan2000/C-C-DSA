@@ -2,7 +2,8 @@
 void unique_elements(int[], int);
 int main()
 {
-    int size = 5, arr[] = {1, 0, 2, 2, 4};
+    int arr[] = {1, 0, 2, 2, 4,5,5,8,9,1,5,1,54,6};
+    int size = sizeof(arr) / 4;
     unique_elements(arr, size);
     return 0;
 }
