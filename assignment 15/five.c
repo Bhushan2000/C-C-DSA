@@ -2,7 +2,10 @@
 int first_occurance(int[], int);
 int main()
 {
-    int arr[] = {1, 1, 2, 3, 3}, size = 5;
+    // int arr[] = {1, 1, 2, 3, 3},
+    int arr[] = {6, 10, 5, 4, 9, 120, 4, 6, 10}, size = sizeof(arr) / 4;
+    // Input: arr[] = {10, 5, 3, 4, 3, 5, 6}
+    // Output: 5
     if (first_occurance(arr, size))
         printf("Adjacent duplicate is : %d", first_occurance(arr, size));
     else
@@ -11,14 +14,20 @@ int main()
 }
 //  first occurrence of adjacent duplicate values in the array.
 int first_occurance(int arr[], int size)
-{
-    int counter = 0, value = 0;
+{   // {10, 5, 3, 4, 3, 5, 6}
+    int value = 0;
     for (int i = 0; i < size - 1; i++)
     {
-        if (arr[i] == arr[i + 1])
+        for (int j = i + 1; j < size; j++)
         {
-            value = arr[i];
+            if (arr[i] == arr[j])
+            {
+                value = arr[i];
+                break;
+            }
         }
+        if (value != 0)
+            break;
     }
     return value;
 }
