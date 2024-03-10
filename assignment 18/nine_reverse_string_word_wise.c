@@ -3,30 +3,30 @@
 int main()
 {
     char str[] = "MySirG Education Services";
-    int size = sizeof(str);
-    char str1[size], counter = 0;
+    char temp[26] = {}, counter = 0;
     // “Services Education Mysirg”
     int i, j;
-    for (i = size - 1; i != 0; i--)
+    for (i = 0; str[i]; i++)
     {
         if (str[i] == 32)
         {
-            for (j = i + 1; str[j]; j++)
+            for (j = i - 1; j > -1 && str[j] != 32; j--)
             {
-                // printf("%c", str[j]);
-                str1[counter] = str[j];
+                temp[counter] = str[j];
                 counter++;
             }
-            if (j != 0)
+            temp[counter] = 32;
+            counter++;
+        }
+        else if (i == sizeof(str) - 2)
+        {
+            for (j = i; str[j] != 32; j--)
             {
-                str1[counter] = 32;
+                temp[counter] = str[j];
                 counter++;
             }
         }
     }
-
-    // printf("%d", strlen(str1));
-    printf("%s", str1);
-
+    printf("%s", strrev(temp));
     return 0;
 }
