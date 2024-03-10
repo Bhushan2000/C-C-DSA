@@ -9,19 +9,17 @@ int main()
 }
 void unique_elements(int arr[], int size)
 {
-    int temp[size];
+    int temp[20] = {}; // initialize the array with zeros and place the arr[i] values on the required indexes in the temp[i]
     for (int i = 0; i < size; i++)
     {
-        for (int j = i; j < i + 1; j++)
-        {
-            if (temp[j] != arr[i])
-            {
-                temp[j] = arr[i];
-            }
-        }
+        temp[arr[i]]++;
     }
-    for (int i = 0; i < sizeof(temp)/4; i++)
+
+    for (int i = 0; i < sizeof(temp) / 4; i++)
     {
-        printf("%d ", temp[i]);
+        if (temp[i] != 0)
+        {
+            printf("%d ", i);
+        }
     }
 }
