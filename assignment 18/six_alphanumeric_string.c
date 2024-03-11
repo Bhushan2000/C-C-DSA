@@ -1,18 +1,21 @@
 #include <stdio.h>
 int main()
 {
-    char str[] = "yahoo@12";
-    int a = 0;
+    char str[] = "yahoo@1";
+    int Alphabet = 0, number = 0;
     // string must contain at least one alphabet and one digit
     for (int i = 0; str[i]; i++)
     {
-        if (str[i] >= 'a' && str[i] <= 'z' ||
-            str[i] >= '1' && str[i] <= '9')
+        if (str[i] >= 'a' && str[i] <= 'z')
         {
-            a = 1;
+            Alphabet++;
+        }
+        if (str[i] >= '1' && str[i] <= '9')
+        {
+            number++;
         }
     }
-    if (a)
+    if (Alphabet > 0 && number > 0)
         printf("Alphanumeric string");
     else
         printf("Not a Alphanumeric string");
