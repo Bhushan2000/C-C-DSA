@@ -2,11 +2,11 @@
 // Thursday, March 7, 2024 @ 05:52:25 PM
 int main()
 {
-    char str[] = "Hello I am a powerful being. I take care of myself.";
+    char str[] = "Hello I am a  powerful being. I take care of myself.";
     int count = 0;
     for (int i = 0; str[i]; i++)
     {
-        if (str[i] == 32)
+        if (str[i] == 32 && str[i + 1] != 32) // two spaces can occurs in continuous so we check str[i+1]!=32
         {
             count++;
         }
