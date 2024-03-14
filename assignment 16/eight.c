@@ -6,18 +6,31 @@ int main()
         {
             {22, 54, 5}, {78, 85, 5}, {15, 85, 5}};
     printf("Upper triangular Matrix:\n");
+    // My Approach
+    // for (int i = 0; i < row; i++)
+    // {
+    //     for (int j = 0; j < column; j++)
+    //     {
+    //         if (j >= i)
+    //         {
+    //             printf("%d ", arr[i][j]);
+    //         }
+    //         else
+    //         {
+    //             printf("   ");
+    //         }
+    //     }
+    //     printf("\n");
+    // }
+
+    // new approach learn by teacher
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
         {
-            if (j >= i)
-            {
-                printf("%d ", arr[i][j]);
-            }
-            else
-            {
-                printf("   ");
-            }
+            if (i < j) // main condition
+                arr[i][j] = 0;
+            printf("%d ", arr[i][j]);
         }
         printf("\n");
     }
