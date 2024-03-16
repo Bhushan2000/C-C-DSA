@@ -1,6 +1,6 @@
-C C++ DSA & IOT\n
-C language
-............
+C C++ DSA & IOT
+
+C language............
 1) Fundamentals of computers
 2) Intro to programming
 3) Setup environment
