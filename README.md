@@ -34,6 +34,8 @@
 * structure
 * Dynamic Memory Allocation
 * Memory Leak
+  
+* Intro to C++
 
 ## About The Project
 
