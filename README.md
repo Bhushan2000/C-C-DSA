@@ -3,7 +3,7 @@
   <h3 align="center">C C++ DSA</h3>
 
   <p align="center">
-    A Job Ready Bootcamp in C++, DSA and IOT
+    A Job Ready Bootcamp in C C++, DSA and IOT
     <br/>
     <br/>
   </p>
