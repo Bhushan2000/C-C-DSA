@@ -1,25 +1,42 @@
-C C++ DSA & IOT
+<br/>
+<p align="center">
+  <h3 align="center">C C++ DSA</h3>
 
-C language............
-1) Fundamentals of computers
-2) Intro to programming
-3) Setup environment
-4) History of c/c++
-5) Tokens
-6) Datatypes & variables declaration
-7) Input and Output instruction in c
-8) Operators in c
-9) Descion control instruction
-10) Iterative control instruction
-11) Star Pattern Problems
-12) functions
-13) Recursion
-14) Arrays
-15) Sorting
-16) String
-17) Pointers
-18) structure
-19) Dynamic Memory Allocation
-20) Memory Leak
+  <p align="center">
+    A Job Ready Bootcamp in C C++, DSA and IOT
+    <br/>
+    <br/>
+  </p>
+</p>
 
- 
+
+
+## Table Of Contents
+
+* [About the Project](#about-the-project)
+* Fundamentals of computers
+* Intro to programming
+* Setup environment
+* History of c/c++
+* Tokens
+* Datatypes & variables declaration
+* Input and Output instruction in c
+* Operators in c
+* Descion control instruction
+* Iterative control instruction
+* Star Pattern Problems
+* functions
+* Recursion
+* Arrays
+* Sorting
+* String
+* Pointers
+* structure
+* Dynamic Memory Allocation
+* Memory Leak
+  
+* Intro to C++
+
+## About The Project
+
+Learning About C C++ DSA
