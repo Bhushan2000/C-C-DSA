@@ -3,7 +3,7 @@ void swap_values(int *, int *);
 int main()
 {
     int a = 1, b = 2;
-    swap_values(&a, &b);
+    swap_values(&a, &b); // call by refrence
     printf("%d %d", a, b);
     return 0;
 }
