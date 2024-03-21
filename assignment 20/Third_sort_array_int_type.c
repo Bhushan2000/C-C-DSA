@@ -3,8 +3,13 @@ void sort(int *, int);
 void sort_new_approach(int *, int);
 int main()
 {
-    int arr[5] = {5, 3, 8, 4, 6};
+    // int arr[5] = {5, 3, 8, 4, 6};
+    int arr[] = {47, 62, 78, 95, 32, 45, 12, 48, 25};
     sort_new_approach(arr, sizeof(arr) / sizeof(arr[0]));
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+    {
+        printf("%d ", arr[i]);
+    }
     return 0;
 }
 // My Approach
@@ -46,14 +51,15 @@ void sort_new_approach(int *ptr, int size)
             if (ptr[j] > ptr[j + 1])
             {
                 // swap
-                temp = *(ptr + j);
-                *(ptr + j) = *(ptr + (j + 1));
-                *(ptr + (j + 1)) = temp;
+                // temp = *(ptr + j);
+                // *(ptr + j) = *(ptr + (j + 1));
+                // *(ptr + (j + 1)) = temp;
+
+                // without using *astrik
+                temp = ptr[j];
+                ptr[j] = ptr[j + 1];
+                ptr[j + 1] = temp;
             }
         }
-    }
-    for (int i = 0; i < size; i++)
-    {
-        printf("%d ", i[ptr]);
     }
 }
