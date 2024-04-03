@@ -23,7 +23,7 @@ int main()
 float area(float radius)
 {
     // area of circle
-    return 3.14 * radius;
+    return 3.14 * radius*radius;
 }
 int area(int length, int width)
 {
