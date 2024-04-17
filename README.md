@@ -12,7 +12,7 @@
 
 
 ## Table Of Contents
-
+# C Language
 * [About the Project](#about-the-project)
 * Fundamentals of computers
 * Intro to programming
@@ -34,8 +34,54 @@
 * structure
 * Dynamic Memory Allocation
 * Memory Leak
-  
-* Intro to C++
+<br/>
+# C++ Language & DSA
+* Basics of C++
+* 
+*	Functions in C++
+*	Classes and objects
+*	Member function, static, constructor
+*	Operator overloading and friend function
+*	Operator Overloading, friend operator and this pointers
+*	Type Casting and Conversion
+*	Exception Handling
+*	new and delete operator, Inheritance
+*	Overriding, overloading, constructor in inheritance
+*	Virtual Function, Abstract Class
+*	File Handling
+*	Templates
+*	STL:array
+*	STL:Vector
+*	STL:List
+*	Forward_list
+*	Deque
+*	Stack
+*	Queue
+*	priority_queue
+*	set
+*	multiset
+*	map
+*	Pair and Tuple
+*	Multimap
+*	Unordered_set
+*	Unordered_map
+*	Unordered_multiset
+*	Unordered_multimap
+*	Time complexity
+*	DSA: Array and Dynamic Array
+*	Stack
+*	DSA:Singly Linked list
+*	DSA:Doubly Linked List
+*	DSA:Circular Linked List
+*	Queue
+*	Binary Tree and Binary Search Tree
+*	AVL Tree, M-Way Tree, B-Tree and B+ Tree
+*	Graph
+*	Sorting Algorithm
+*	String Algorithm
+*	Divide and Conquer
+*	Greedy Algorithm
+
 
 ## About The Project
 
