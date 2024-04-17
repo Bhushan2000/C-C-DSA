@@ -34,10 +34,8 @@
 * structure
 * Dynamic Memory Allocation
 * Memory Leak
-<br/>
 # C++ Language & DSA
 * Basics of C++
-* 
 *	Functions in C++
 *	Classes and objects
 *	Member function, static, constructor
