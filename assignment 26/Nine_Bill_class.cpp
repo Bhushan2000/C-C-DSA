@@ -6,18 +6,30 @@ private:
     int consumer_no;
     // char *name[20];    // array of pointer
     //  char (*name2)[20]; // pointer to array
+    char consumer_name[30];
     float units_consumed;
     float bill_calculated;
 
 public:
-    void setData(int cus_no, float unit_con)
+    // void setData(int cus_no, char *n, float unit_con)
+    // {
+    //     consumer_no = cus_no;
+    //     consumer_name = n;
+    //     units_consumed = unit_con;
+    // }
+    void input()
     {
-        consumer_no = cus_no;
-        units_consumed = unit_con;
+        cout << "Enter consumer no : ";
+        cin >> consumer_no;
+        cout << "Enter consumer name : ";
+        cin >> consumer_name;
+        cout << "Enter units consumed : ";
+        cin >> units_consumed;
     }
     void getDetails()
     {
         cout << "Consumer_no: " << consumer_no << endl
+             << "Consumer_name: " << consumer_name << endl
              << "Units_consumed: " << units_consumed << endl;
     }
     float calculateBill()
@@ -43,7 +55,7 @@ public:
 int main()
 {
     Bill b;
-    b.setData(1520, 205);
+    b.input();
     b.getDetails();
     cout << "Bill Calculated: " << b.calculateBill();
 
